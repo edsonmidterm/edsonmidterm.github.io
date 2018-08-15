@@ -2,6 +2,19 @@
 <title>EdsonProfile</title>
 <meta name="viewport" content="device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
+<head>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeToggle(2000);
+        $("#div2").fadeToggle(3000);
+        $("#div3").fadeToggle(4000);
+        $("#div4").fadeToggle(5000);
+    });
+});
+</script>
+</head>
 <style>
 body{
   
@@ -65,7 +78,7 @@ hr {
 <div class="w3-row-padding w3-theme">
 <div class="w3-col w3-trans-blue w3-container w3-topbar w3-bottombar w3-border-amber w3-margin-bottom  w3-padding-32 w3-margin-top w3-mobile w3-leftbar w3-rightbar" style="width:100%">
       <header class="w3-container w3-transparent w3-round-xxlarge w3-center  ">
-      <span class="w3-tag w3-jumbo w3-transparent w3-round-xxlarge w3-text-red "><h1><img src="icon.png" alt="" height="50">"The best and most beautiful things in the world cannot be seen or touched - they must be felt with the heart"<img src="icon.png" alt="" height="50"></h1></span>
+      <span class="w3-tag w3-jumbo w3-transparent w3-round-xxlarge w3-text-red "><h1><img src="icon.png" alt="" height="50">"Thanks for visiting comeback again!"<img src="icon.png" alt="" height="50"></h1></span>
       
       </header>
 </div>
@@ -73,31 +86,35 @@ hr {
 
 
     <div class="w3-card w3-clear w3-trans-red w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-yellow">
-       <header class="w3-container w3-transparent w3-round-xxlarge w3-center ">
-      <span class="w3-tag w3-jumbo w3-trans-yellow w3-round-xxlarge w3-leftbar w3-rightbar w3-mobile w3-margin-top"><h1 class="w3-xxxlarge"><img src="final7.png" alt="" height="90"><b>CONTACT</b>
-      <img src="final7.png" alt="" height="90"></span></h1>
+       <header class="w3-container w3-transparent w3-center ">
+
+      <button class="w3-trans-yellow w3-margin-top"><h1>Contact: Show details</h1></button><br><br>
 
       </header>
       <div class="quarter">
   <div class="w3-container w3-quarter w3-margin-bottom"><img src="contact.png" style="width:100%"></div>
 </div>
+
 <div class="w3-container w3-threequarter">
-  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Email Address Main: </div>
+<div id="div1" style="display:none">
+  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Email Address Main:</h1> </div>
   <div class="w3-panel w3-card-2 w3-half  w3-purple"><h1>Pepedehepez@gmail.com</h1></div>
-  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Alternate Email Address:</div>
+</div>
+<div id="div2" style="display:none">
+  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Alternate Email Address:</h1></div>
   <div class="w3-panel w3-card-2 w3-half   w3-purple"><h1>edson_seawalker@yahoo.com</h1></div>
-  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Contact Number:</div>
+</div>
+<div id="div3" style="display:none">
+  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Contact Number:</h1></div>
   <div class="w3-panel w3-card-2 w3-half   w3-purple"><h1>09084721389</h1></div>
-  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Office:</div>
+</div>
+<div id="div4" style="display:none">
+  <div class="w3-panel w3-card-2 w3-half w3-center w3-text-white w3-pink"><h1>Office:</h1></div>
   <div class="w3-panel w3-card-2 w3-half   w3-purple"><h1>B4 L6 STA. ANA TAGUIG CITY</h1></div>
-  
-  
+</div>
+</div>
 </div>
 
-      
-</div>
-</div>
-</div>
 
 
 <div class="w3-container w3-transparent">
@@ -114,23 +131,10 @@ hr {
   
 </div>
 </div>
+</div>
 
-<script>
-var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 7000);    
-}
-</script>
+
 <script>
 var myIndex = 0;
 carousel();
@@ -147,7 +151,6 @@ function carousel() {
     setTimeout(carousel, 2500);    
 }
 </script>
-
 </body>
 </html>
 
