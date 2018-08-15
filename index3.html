@@ -51,7 +51,7 @@ hr {
       <source src="mp3/lap2.mp3">
       </audio>
 
-<<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav">
   <a href="index2.html" id="home"><h4>Home</h4></a>
   <a href="index3.html" id="about"><h4>About</h4></a>
   <a href="index4.html" id="interest"><h4>Interest</h4></a>
@@ -337,6 +337,45 @@ function carousel() {
     x[myIndex-1].style.display = "block";  
     setTimeout(carousel, 2500);    
 }
+</script>
+<script language="JavaScript">
+
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+ 
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+ 
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+     
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+     
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
 </script>
 
 
